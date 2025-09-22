@@ -16,6 +16,17 @@ import com.example.MovieTicketBookRealProject.Repository.ShowRepository;
 
 @Service
 public class BookingService {
-
-    
+	
+   @Autowired
+   private BookingRepository bookingRepository;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }
