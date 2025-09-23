@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.MovieTicketBookRealProject.DTO.BookingDTO;
 import com.example.MovieTicketBookRealProject.Entity.Booking;
+import com.example.MovieTicketBookRealProject.Entity.BookingStatus;
 import com.example.MovieTicketBookRealProject.Service.BookingService;
 
 @RestController
@@ -26,7 +27,7 @@ public class BookingController {
 	private BookingService bookingService;
 	
 		@PostMapping("/createbooking")
-		public ResponseEntity<Booking> createBooking(@RequestBody BookingDTO bookkingDTO){
+		public ResponseEntity<Booking> createBooking(@RequestBody BookingDTO bookingDTO){
 		
 		
 		return ResponseEntity.ok(bookingService.createBooking(bookingDTO));
@@ -48,26 +49,26 @@ public class BookingController {
 		
 		
 		@PutMapping("/confirmbooking/{id}")
-    	public ResponseEntity<Booking> ConfirmBooking(@PathVariable  Long id){
+    	public ResponseEntity<Booking> confirmBooking(@PathVariable  Long id){
 		
 		
-		return ResponseEntity.ok(bookingService.ConfirmBooking(id));
+		return ResponseEntity.ok(bookingService.confirmBooking(id));
 	}
 		
 		
 		@PutMapping("/cancel/{id}")
-    	public ResponseEntity<Booking> CancelBooking(@PathVariable  Long id){
+    	public ResponseEntity<Booking> cancelBooking(@PathVariable  Long id){
 		
 		
-		return ResponseEntity.ok(bookingService.CancelBooking(id));
+		return ResponseEntity.ok(bookingService.cancelBooking(id));
 	}
 		
-		@GetMapping("/getbookingbystatus/{bookingStatus}")
-    	public ResponseEntity<List<Booking>> getBookingByStatus(@PathVariable  BookingStatus bookingStatus){
-		
-		
-		return ResponseEntity.ok(bookingService.getBookingByStatus(bookingStatus));
-	}
+//		@GetMapping("/getbookingbystatus/{bookingStatus}")
+//    	public ResponseEntity<List<Booking>> getBookingByStatus(@PathVariable  BookingStatus bookingStatus){
+//		
+//		
+//		return ResponseEntity.ok(bookingService.getBookingByStatus(bookingStatus));
+//	}
 		
 		
 		

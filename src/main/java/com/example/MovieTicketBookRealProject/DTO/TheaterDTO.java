@@ -8,7 +8,7 @@ public class TheaterDTO {
    
 	private String theaterName;
 	private String theaterLocation;
-	private String theaterCapacity;
+	private Long theaterCapacity;
 	private String theaterScreenType;
 	
 }
