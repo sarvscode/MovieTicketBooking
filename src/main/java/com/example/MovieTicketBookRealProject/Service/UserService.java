@@ -28,7 +28,7 @@ public class UserService {
 	private AuthenticationManager authenticationManager;
 	
 	@Autowired
-	private Jwtservice jwtService;
+	private JwtService jwtService;
 
 	public Users registerNormalUser(RegisterRequestDTO registerRequestDTO) {
 		

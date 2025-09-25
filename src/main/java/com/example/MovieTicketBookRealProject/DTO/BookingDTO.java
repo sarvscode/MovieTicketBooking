@@ -7,6 +7,7 @@ import java.util.List;
 import com.example.MovieTicketBookRealProject.Entity.BookingStatus;
 
 import lombok.Data;
+
 @Data
 public class BookingDTO {
 

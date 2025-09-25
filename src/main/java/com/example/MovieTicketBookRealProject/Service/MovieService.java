@@ -20,7 +20,7 @@ public class MovieService {
 		
 		Movie movie = new Movie();
 		movie.setName(movieDTO.getName());
-		movie.setDescribe(movieDTO.getDescribe());
+		movie.setDescription(movieDTO.getDescribe());
 		movie.setGenre(movieDTO.getGenre());
 		movie.setReleaseDate(movieDTO.getReleaseDate());
 		movie.setDuration(movieDTO.getDuration());
@@ -74,7 +74,7 @@ public class MovieService {
 		Movie movie= movieRepository.findById(id).orElseThrow(()-> new RuntimeException("no Movie Found for the id") );
 		 
 		movie.setName(movieDTO.getName());
-		movie.setDescribe(movieDTO.getDescribe());
+		movie.setDescription(movieDTO.getDescribe());
 		movie.setGenre(movieDTO.getGenre());
 		movie.setReleaseDate(movieDTO.getReleaseDate());
 		movie.setDuration(movieDTO.getDuration());

@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.MovieTicketBookRealProject.DTO.TheaterDTO;
 import com.example.MovieTicketBookRealProject.Entity.Theater;
 import com.example.MovieTicketBookRealProject.Repository.TheaterRepository;
 
+@Service
 public class TheaterService {
 	
 	@Autowired

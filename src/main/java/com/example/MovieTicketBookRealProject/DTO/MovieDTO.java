@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import lombok.Data;
-@Entity
+
 @Data
 public class MovieDTO {
 
