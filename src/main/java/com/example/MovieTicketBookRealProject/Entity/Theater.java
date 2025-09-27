@@ -7,6 +7,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 
@@ -24,4 +26,9 @@ public class Theater {
 	
 	@OneToMany(mappedBy = "theater" ,fetch = FetchType.LAZY)
 	private List<Show> show;
+	
+	@ManyToOne
+	@JoinColumn(name="location_id", nullable=false)
+	private Location location;
+
 }

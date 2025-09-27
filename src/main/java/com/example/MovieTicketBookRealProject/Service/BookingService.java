@@ -29,7 +29,8 @@ public class BookingService {
    
    @Autowired
    private UserRepository userRepository;
-
+   
+  
    public Booking createBooking(BookingDTO bookingDTO) 
    {
 	
@@ -153,6 +154,9 @@ public class BookingService {
 	   
 	   return price* numberOfSeats;
    }
+   
+   
+
 
 //   public Booking getBookingByStatus(BookingStatus bookingStatus) {
 //	return null;

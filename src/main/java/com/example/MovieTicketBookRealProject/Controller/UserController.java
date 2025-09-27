@@ -2,6 +2,7 @@ package com.example.MovieTicketBookRealProject.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,11 @@ import com.example.MovieTicketBookRealProject.Service.UserService;
 public class UserController {
     @Autowired
     private UserService userService;
+    
+    @GetMapping("/login")
+    public String loginPage() {
+        return "login"; 
+    }
     
     @PostMapping("/registernormaluser")
     public ResponseEntity<Users> registerNormalUser(@RequestBody RegisterRequestDTO registerRequestDTO){

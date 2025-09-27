@@ -37,13 +37,15 @@ public class UserService {
 		throw new RuntimeException("User already register");
 		}
 		
-		Set<String> roles=new HashSet<String>();
-		roles.add("ROLE_USER");
 		
 		Users user=new Users();
 		user.setUsername(registerRequestDTO.getUsername());
 		user.setEmail(registerRequestDTO.getEmail());
 		user.setPassword(passwordEncoder.encode(registerRequestDTO.getPassword()));
+		
+		Set<String> roles=new HashSet<String>();
+		roles.add("ROLE_USER");
+		
 		user.setRoles(roles);
 		
 		return userRepository.save(user) ;
