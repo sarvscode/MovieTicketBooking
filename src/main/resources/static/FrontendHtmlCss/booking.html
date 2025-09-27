@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Book a Ticket</h2>
+  <form id="bookingForm">
+  <select id="showId" required></select>
+    <input type="number" id="showId" placeholder="Show ID" required>
+    <input type="number" id="userId" placeholder="User ID" required>
+    <input type="number" id="numberOfSeats" placeholder="Number of Seats" required>
+    <input type="text" id="seatNumbers" placeholder="Seat Numbers (comma separated)" required>
+    <button type="submit">Book Now</button>
+  </form>
+  <p id="bookingMessage"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
